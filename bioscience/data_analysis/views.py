@@ -56,7 +56,7 @@ def create_db_datasequence(file_path):
 @permission_classes([IsAuthenticated])
 def upload_datasequence_csv(request):
     file = request.FILES.get('file')
-    obj = DataSequenceFile.objects.create(file-file)
+    obj = DataSequenceFile.objects.create(file=file)
     create_db_datasequence(obj.file)
     return Response({"message": "Upload CSV Data Sequence Done"}, status=status.HTTP_200_OK)
 
